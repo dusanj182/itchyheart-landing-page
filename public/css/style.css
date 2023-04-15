@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+h3 {
+    @apply mb-8 text-4xl font-bold text-eerie md:text-5xl;
+}
+
+h5 {
+    @apply mb-2 text-2xl font-bold text-night;
+}
+
+}
+
+.section-container {
+    @apply max-w-6xl mx-auto text-center  px-10;
+}
+
+.section-content {
+    @apply max-w-3xl mx-auto text-xl leading-9 text-center text-[#9fabb2]
+}
+
+.button-container {
+    @apply flex flex-col justify-center w-full space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-4;
+}
+
+body {
+    background-image: url('../img/clip/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+@media(max-width: 576px) {
+    body {
+        background-image: url('../img/clip/bg-header-mobile.png');
+    }
+}
+
+.ics a:nth-child(odd):hover {
+    filter: invert(60%) sepia(79%) saturate(1493%) hue-rotate(193deg) brightness(98%) contrast(106%);
+}
+
+.ics a:nth-child(even):hover {
+    filter: invert(70%) sepia(66%) saturate(335%) hue-rotate(356deg) brightness(88%) contrast(90%);
+}
+
+
